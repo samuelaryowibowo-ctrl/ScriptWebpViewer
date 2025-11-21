@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surat Cinta dari Gembrot untuk Nio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+            color: #5a3e36;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .envelope {
+            background: linear-gradient(135deg, #e66465, #9198e5);
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .envelope::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath fill='%23ffffff' fill-opacity='0.1' d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z'%3E%3C/path%3E%3C/svg%3E");
+        }
+        
+        .title {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 20px;
+        }
+        
+        .heart {
+            color: #ff4d6d;
+            font-size: 2rem;
+            animation: heartbeat 1.5s ease-in-out infinite both;
+            display: inline-block;
+            margin: 0 5px;
+        }
+        
+        @keyframes heartbeat {
+            from {
+                transform: scale(1);
+                transform-origin: center center;
+                animation-timing-function: ease-out;
+            }
+            10% {
+                transform: scale(0.91);
+                animation-timing-function: ease-in;
+            }
+            17% {
+                transform: scale(0.98);
+                animation-timing-function: ease-out;
+            }
+            33% {
+                transform: scale(0.87);
+                animation-timing-function: ease-in;
+            }
+            45% {
+                transform: scale(1);
+                animation-timing-function: ease-out;
+            }
+        }
+        
+        .letter {
+            padding: 40px;
+            position: relative;
+        }
+        
+        .letter-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: justify;
+        }
+        
+        .salutation {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #e66465;
+        }
+        
+        .closing {
+            margin-top: 30px;
+            text-align: right;
+            font-style: italic;
+        }
+        
+        .signature {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            color: #e66465;
+            margin-top: 10px;
+        }
+        
+        .date {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #888;
+        }
+        
+        .photo-frame {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 20px auto;
+            border: 5px solid #e66465;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .photo-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 3rem;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(230, 100, 101, 0.1);
+            color: #5a3e36;
+            font-size: 0.9rem;
+        }
+        
+        .music-player {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .music-btn {
+            background-color: #e66465;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .music-btn:hover {
+            background-color: #d45455;
+            transform: scale(1.1);
+        }
+        
+        .love-quote {
+            font-style: italic;
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+            border-left: 4px solid #e66465;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                border-radius: 10px;
+            }
+            
+            .envelope {
+                padding: 20px;
+            }
+            
+            .title {
+                font-size: 2rem;
+            }
+            
+            .letter {
+                padding: 20px;
+            }
+            
+            .letter-content {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="envelope">
+            <h1 class="title">Surat Cinta <i class="fas fa-heart heart"></i></h1>
+            <p class="subtitle">Dari secret untuk Nio</p>
+            
+            <div class="photo-frame">
+                <div class="photo-placeholder">
+                    <i class="fas fa-heart"></i>
+                </div>
+            </div>
+            
+            <div class="music-player">
+                <button class="music-btn" id="playBtn">
+                    <i class="fas fa-play"></i>
+                </button>
+                <button class="music-btn" id="pauseBtn">
+                    <i class="fas fa-pause"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div class="letter">
+            <p class="salutation">Untuk Nio, kekasih hatiku...</p>
+            
+            <div class="letter-content">
+                <p>Hari ini, seperti biasa, aku terbangun dengan senyuman karena memikirkanmu. Setiap detik bersamamu adalah anugerah yang tak ternilai harganya.</p>
+                
+                <div class="love-quote">
+                    "Cinta itu bukan tentang menemukan orang yang sempurna, tapi tentang melihat orang yang tidak sempurna dengan cara yang sempurna."
+                </div>
+                
+                <p>Nio, kamu adalah alasan mataku berbinar setiap pagi. Senyummu adalah matahari yang menghangatkan hariku. Tawamu adalah musik terindah yang pernah kudengar.</p>
+                
+                <p>Aku masih ingat jelas pertama kali kita bertemu. Saat itu, dunia seakan berhenti berputar. Dan sejak saat itu, hidupku tidak pernah sama lagi. Kamu membawa warna-warna indah ke dalam duniamu yang sebelumnya biasa saja.</p>
+                
+                <p>Meskipun aku ini aneh, tapi cintaku padamu tulus dan besar seperti tubuhku ini. Aku mungkin tidak sempurna, tapi aku akan selalu berusaha menjadi yang terbaik untukmu.</p>
+                
+                <p>Aku berjanji akan selalu menjagamu, menghargaimu, dan membuatmu tersenyum setiap hari. Bersamamu, aku merasa lengkap. Kamu adalah puzzle terakhir yang selama ini kucari.</p>
+                
+                <p>Terima kasih sudah menerima aku apa adanya. Terima kasih untuk setiap tawa, setiap pelukan, dan setiap momen berharga yang kita lalui bersama.</p>
+            </div>
+            
+            <div class="closing">
+                <p>Selamanya milikmu,</p>
+                <p class="signature">secret</p>
+                <p class="date">Hari ini dan selamanya</p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Dibuat dengan <i class="fas fa-heart" style="color: #e66465;"></i> untuk Nio | Setiap hari adalah Valentine ketika bersamamu</p>
+        </div>
+    </div>
+
+    <audio id="bgMusic" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        Browser Anda tidak mendukung elemen audio.
+    </audio>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const bgMusic = document.getElementById('bgMusic');
+            const playBtn = document.getElementById('playBtn');
+            const pauseBtn = document.getElementById('pauseBtn');
+            
+            // Fungsi untuk memutar musik
+            playBtn.addEventListener('click', function() {
+                bgMusic.play();
+                playBtn.style.display = 'none';
+                pauseBtn.style.display = 'flex';
+            });
+            
+            // Fungsi untuk menghentikan musik
+            pauseBtn.addEventListener('click', function() {
+                bgMusic.pause();
+                playBtn.style.display = 'flex';
+                pauseBtn.style.display = 'none';
+            });
+            
+            // Awalnya sembunyikan tombol pause
+            pauseBtn.style.display = 'none';
+            
+            // Animasi untuk elemen hati
+            const hearts = document.querySelectorAll('.heart');
+            hearts.forEach(heart => {
+                heart.addEventListener('click', function() {
+                    this.style.animation = 'none';
+                    setTimeout(() => {
+                        this.style.animation = 'heartbeat 1.5s ease-in-out infinite both';
+                    }, 10);
+                });
+            });
+            
+            // Efek ketik untuk bagian pembuka
+            const salutation = document.querySelector('.salutation');
+            const originalText = salutation.textContent;
+            salutation.textContent = '';
+            
+            let i = 0;
+            function typeWriter() {
+                if (i < originalText.length) {
+                    salutation.textContent += originalText.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 100);
+                }
+            }
+            
+            // Mulai efek ketik setelah halaman dimuat
+            setTimeout(typeWriter, 1000);
+        });
+    </script>
+</body>
+</html>
